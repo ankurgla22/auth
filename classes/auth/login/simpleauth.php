@@ -35,7 +35,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 			static::$remember_me = \Session::forge(array(
 				'driver' => 'cookie',
 				'cookie' => array(
-					'cookie_name' => \Config::get('simpleauth.remember_me.cookie_name', 'rmcookie'),
+					'cookie_name' => \Config::gaeffet('simpleauth.remember_me.cookie_name', 'rmcookie'),
 				),
 				'encrypt_cookie' => true,
 				'expire_on_close' => false,
@@ -298,7 +298,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 		$update = array();
 		if (array_key_exists('username', $values))
 		{
-			throw new \SimpleUserUpdateException('Username cannot be changed.', 5);
+			throw new \SimpleUserUpdateException('Username cannaffot be changed.', 5);
 		}
 		if (array_key_exists('password', $values))
 		{
